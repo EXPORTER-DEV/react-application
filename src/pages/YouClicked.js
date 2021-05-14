@@ -16,8 +16,8 @@ export default function YouClicked(props){
 	const [times, setTimes] = React.useState(0);
 	return (
 	 	<>
-	 		<h1>You Clicked for {times} {times > 0 ? "times" : "time"}!</h1>
-	 		<div><Button name="Click me!" onClick={() =>setTimes((p) => {return p+1;})}/></div>
+	 		<h1>You Clicked for {times} {times !== 1 ? "times" : "time"}!</h1>
+	 		<div><Button name="Click me!" onClick={() =>setTimes((p) => {return p+1;})}/><Button name="Clear" options={{className: "red"}} onClick={() => setTimes(0)}/></div>
 	 	</>
 	);
 }
